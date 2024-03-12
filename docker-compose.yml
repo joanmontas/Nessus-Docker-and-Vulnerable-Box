@@ -1,0 +1,15 @@
+# Copyright Joan Montas
+# All rights reserved.
+# License under GNU General Public License v3.0
+
+version: '3'
+
+services:
+  nessus:
+    build: ./nessus_machine
+    restart: always
+    ports:
+      - "8834:8834"
+    environment:
+      USERNAME: changeme
+      PASSWORD: changeme
